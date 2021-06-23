@@ -15,6 +15,6 @@ require (
 	google.golang.org/genproto v0.0.0-20210503173045-b96a97608f20
 )
 
-replace github.com/GoogleCloudPlatform/terraform-google-conversion v0.0.0-20210621184554-4fabc1976194 => /home/rekha/code/terraform-google-conversion
+replace github.com/GoogleCloudPlatform/terraform-google-conversion v0.0.0-20210621184554-4fabc1976194 => /Users/palani/ITP/Palani/Jobs/HCL-GCP-RLI/GOOG/code/terraform-google-conversion
 
 go 1.14
