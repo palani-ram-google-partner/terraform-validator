@@ -28,7 +28,7 @@ provider "google" {
 }
 
 resource "google_kms_crypto_key_iam_binding" "crypto_key" {
-  crypto_key_id = "{{.Provider.project}}/global/kms-keyring-dev/kms-key-dev"
+  crypto_key_id = "{{.Provider.project}}/global/key-ring-test/crypto-key-example"
   role          = "roles/cloudkms.admin"
   members = [
     "allUsers", "allAuthenticatedUsers"

@@ -1,6 +1,6 @@
 [
   {
-    "name": "//cloudkms.googleapis.com/{{.Provider.project}}/global/kms-keyring-dev/kms-key-dev",
+    "name": "//cloudkms.googleapis.com/{{.Provider.project}}/global/key-ring-test/crypto-key-example",
     "asset_type": "cloudkms.googleapis.com/CryptoKey",
     "ancestry_path": "{{.Ancestry}}/project/{{.Provider.project}}",
     "iam_policy": {

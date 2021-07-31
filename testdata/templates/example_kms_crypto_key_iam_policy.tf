@@ -37,6 +37,6 @@ data "google_iam_policy" "admin" {
 }
 
 resource "google_kms_crypto_key_iam_policy" "crypto_key" {
-  crypto_key_id = "{{.Provider.project}}/global/kms-keyring-dev/kms-key-dev"
+  crypto_key_id = "{{.Provider.project}}/global/key-ring-test/crypto-key-example"
   policy_data   = data.google_iam_policy.admin.policy_data
 }

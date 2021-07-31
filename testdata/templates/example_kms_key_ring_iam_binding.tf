@@ -28,7 +28,7 @@ provider "google" {
 }
 
 resource "google_kms_key_ring_iam_binding" "key_ring" {
-  key_ring_id = "{{.Provider.project}}/global/kms-keyring-dev"
+  key_ring_id = "{{.Provider.project}}/global/keyring-example"
   role        = "roles/cloudkms.cryptoKeyEncrypter"
   members = [
     "allUsers", "allAuthenticatedUsers"

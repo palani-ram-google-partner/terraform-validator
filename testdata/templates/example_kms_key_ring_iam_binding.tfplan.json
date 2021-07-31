@@ -13,7 +13,7 @@
                     "schema_version": 0,
                     "values": {
                         "condition": [],
-                        "key_ring_id": "my-project-id/global/kms-keyring-dev",
+                        "key_ring_id": "{{.Provider.project}}/global/keyring-example",
                         "members": [
                             "allAuthenticatedUsers",
                             "allUsers"
@@ -38,7 +38,7 @@
                 "before": null,
                 "after": {
                     "condition": [],
-                    "key_ring_id": "my-project-id/global/kms-keyring-dev",
+                    "key_ring_id": "{{.Provider.project}}/global/keyring-example",
                     "members": [
                         "allAuthenticatedUsers",
                         "allUsers"
@@ -69,10 +69,9 @@
         "provider_config": {
             "google": {
                 "name": "google",
-                "version_constraint": "~\u003e 3.51.0",
                 "expressions": {
-                    "credentials": {
-                        "constant_value": "/Users/palani/ITP/Palani/Jobs/HCL-GCP-RLI/GOOG/credentials/service-account-credential-prj-dev-palani-ram.json"
+                    "project": {
+                        "constant_value": "{{.Provider.project}}"
                     }
                 }
             }
@@ -87,7 +86,7 @@
                     "provider_config_key": "google",
                     "expressions": {
                         "key_ring_id": {
-                            "constant_value": "my-project-id/global/kms-keyring-dev"
+                            "constant_value": "{{.Provider.project}}/global/keyring-example"
                         },
                         "members": {
                             "constant_value": [

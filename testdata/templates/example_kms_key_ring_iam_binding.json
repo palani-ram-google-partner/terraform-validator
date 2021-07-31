@@ -1,6 +1,6 @@
 [
   {
-    "name": "//cloudkms.googleapis.com/{{.Provider.project}}/global/kms-keyring-dev",
+    "name": "//cloudkms.googleapis.com/{{.Provider.project}}/global/keyring-example",
     "asset_type": "cloudkms.googleapis.com/KeyRing",
     "ancestry_path": "{{.Ancestry}}/project/{{.Provider.project}}",
     "iam_policy": {
@@ -8,7 +8,8 @@
         {
           "role": "roles/cloudkms.cryptoKeyEncrypter",
           "members": [
-            "allUsers", "allAuthenticatedUsers"
+            "allUsers",
+            "allAuthenticatedUsers"
           ]
         }
       ]
