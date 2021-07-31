@@ -27,13 +27,8 @@ provider "google" {
   {{if .Provider.credentials }}credentials = "{{.Provider.credentials}}"{{end}}
 }
 
-data "google_kms_key_ring" "kms-keyring-dev" {
-  name = "kms-keyring-dev"
-  location = "global"
-}
-
 resource "google_kms_key_ring_iam_binding" "key_ring" {
-  key_ring_id = data.google_kms_key_ring.kms-keyring-dev.id
+  key_ring_id = "{{.Provider.project}}/global/kms-keyring-dev"
   role        = "roles/cloudkms.cryptoKeyEncrypter"
   members = [
     "allUsers", "allAuthenticatedUsers"
