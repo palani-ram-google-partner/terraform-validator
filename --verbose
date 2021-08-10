@@ -1,0 +1,4 @@
+Found Violations:
+
+Constraint GCPDNSSECConstraintV1.require_dnssec on resource //dns.googleapis.com/projects/prj-dev-palani-ram/managedZones/publiczone: //dns.googleapis.com/projects/prj-dev-palani-ram/managedZones/publiczone: DNSSEC is enabled.
+
